@@ -3,9 +3,9 @@ import http from 'http';
 import { Server } from 'socket.io';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import authRoutes from './routes/auth.ts';
-import productRoutes from './routes/products.ts';
-import bidsRoutes from './routes/bids.ts';
+import authRoutes from './routes/auth.js';
+import productRoutes from './routes/products.js';
+import bidsRoutes from './routes/bids.js';
 
 dotenv.config();
 

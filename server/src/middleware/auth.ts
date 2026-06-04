@@ -1,6 +1,3 @@
-import express, { Request, Response, NextFunction } from 'express';
-// Wait, that might still be an issue if express is CJS.
-// Better:
 import type { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 
