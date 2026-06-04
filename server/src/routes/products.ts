@@ -16,9 +16,9 @@ router.get('/', async (req, res) => {
 });
 
 // Upload Product
-// ... (rest of the file)
-
+router.post('/upload', async (req, res) => {
   const { businessId, title, description, price, type, fullAddress, publicLocation, auctionData, phoneNumber, phonePrivate } = req.body;
+
 
   try {
     const productResult = await pool.query(
