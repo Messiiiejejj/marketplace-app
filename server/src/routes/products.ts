@@ -4,8 +4,20 @@ import pool from '../db.js';
 
 const router = express.Router();
 
+// Get All Products
+router.get('/', async (req, res) => {
+  try {
+    const productsResult = await pool.query('SELECT * FROM products');
+    res.json(productsResult.rows);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Error fetching products' });
+  }
+});
+
 // Upload Product
-router.post('/upload', async (req, res) => {
+// ... (rest of the file)
+
   const { businessId, title, description, price, type, fullAddress, publicLocation, auctionData, phoneNumber, phonePrivate } = req.body;
 
   try {
